@@ -4,7 +4,7 @@ FROM node:16
 #12.7.0-alpine
 
 # Set the working directory to /app
-WORKDIR '/app'
+WORKDIR /app
 
 # Copy package.json to the working directory
 COPY package.json .
