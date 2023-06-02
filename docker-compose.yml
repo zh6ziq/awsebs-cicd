@@ -1,7 +1,9 @@
 version: '3.4'
 services:
   awsebs-cicd:
-    build: .
+    build:
+      context: .
+      dockerfile: awsebs-cicd.Dockerfile
     ports:
       - "3000:3000"
     env_file:
