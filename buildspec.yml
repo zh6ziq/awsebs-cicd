@@ -26,4 +26,5 @@ phases:
       - echo Writing image definitions file...
       - printf $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
-    files: imagedefinitions.json
+  files:
+    - 'docker-compose.yml'
