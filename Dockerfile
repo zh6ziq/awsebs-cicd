@@ -14,6 +14,7 @@ RUN npm install
 
 # Copying the rest of the code to the working directory
 COPY . .
+RUN ls
 
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
