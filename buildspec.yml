@@ -25,7 +25,7 @@ phases:
       - aws --version
       - aws ecr get-login-password --region $aws_region | docker login --username AWS --password-stdin $aws_account_id
       - echo Pushing the Docker images...
-      - docker-compose --file=docker-compose-prod.yml push
+      - docker-compose --file=docker-compose.yml push
       # - docker push $REPOSITORY_URI:latest
       # - docker push $REPOSITORY_URI:$IMAGE_TAG
       # - echo Writing image definitions file...
