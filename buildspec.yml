@@ -23,7 +23,9 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '{"AWSEBDockerrunVersion":"3","Image":{"Name":"%s","Update":"true"},"Ports":[{"ContainerPort":3000,"HostPort":3000}]}' $REPOSITORY_URI:$IMAGE_TAG > Dockerrun.aws.json
+      - echo use Version 1 for non docker compose app
+      - echo use Version 3 for docker compose app
+      - printf '{"AWSEBDockerrunVersion":"1","Image":{"Name":"%s","Update":"true"},"Ports":[{"ContainerPort":3000,"HostPort":3000}]}' $REPOSITORY_URI:$IMAGE_TAG > Dockerrun.aws.json
       - cat Dockerrun.aws.json
 artifacts:
   files:
