@@ -1,9 +1,9 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      docker: 24
+  # install:
+  #   runtime-versions:
+  #     docker: 24
   pre_build:
     commands:
       - echo Logging in to DockerHub...
